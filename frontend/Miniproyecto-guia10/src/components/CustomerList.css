@@ -1,0 +1,40 @@
+html{
+    background-color: #555;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.tabla-customer {
+  width: 100%;
+  border-collapse: collapse;
+   /* hace que los bordes no se dupliquen */
+}
+
+.tabla-customer th,
+.tabla-customer td {
+  border: 2px solid #090f27ac; /* color del borde */
+  padding: 8px;
+  text-align: left;
+  background-color: #152e5f49;
+}
+
+.tabla-customer th {
+  background-color: #070b36a2;
+}
+
+h3{
+    text-align:center;
+}
+
