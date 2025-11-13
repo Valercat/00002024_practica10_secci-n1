@@ -52,10 +52,9 @@ export default function CustomerList() {
 
 return (
         <>
-        <html>
             <div>
  
-                <div id = "tabla clientes">
+                <div id = "tabla-clientes">
                 <h3>Tabla de clientes </h3>
                   <table className = "tabla-customer"> 
                     <thead>
@@ -69,7 +68,7 @@ return (
                     </thead>
                     <tbody>
                       {customers.map(u => (
-                    <tr>
+                    <tr key={u.id}>
                       <td>{u.id}</td>
                       <td>{u.name}</td>
                       <td>{u.address}</td>
@@ -82,7 +81,6 @@ return (
                 </div>
             
             </div>  
-            </html> 
         </>
     );
 }

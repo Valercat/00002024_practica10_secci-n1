@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom" ;
 import { useState } from "react" ;
 
 import CustomerList from "./CustomerList.jsx";
+import RegistroVenta from "./registroVenta.jsx";
 
 import "./Home.css";
 
@@ -13,6 +14,8 @@ function Home() {
     <>
     <div>
     <CustomerList />
+    <br />
+    <RegistroVenta />
     </div>
     </>
   );
