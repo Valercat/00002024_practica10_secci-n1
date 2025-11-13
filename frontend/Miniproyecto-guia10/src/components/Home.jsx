@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom" ;
-import { useState } from "react" ;
-
+import { useRef, useState, useEffect } from "react";
+import axios from "axios";
 import CustomerList from "./CustomerList.jsx";
 import RegistroVenta from "./registroVenta.jsx";
+import SalesList from "./SalesList.jsx";
 
 import "./Home.css";
 
@@ -16,6 +17,8 @@ function Home() {
     <CustomerList />
     <br />
     <RegistroVenta />
+    <br />
+    <SalesList />
     </div>
     </>
   );

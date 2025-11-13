@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import "./registroVenta.css";
 
@@ -53,7 +53,7 @@ export default function RegistroVenta() {
           />
         </div>
 
-        <div style={{ marginBottom: "10px" }}>
+        <div>
           <label>Monto ($):</label>
           <input
             type="number"

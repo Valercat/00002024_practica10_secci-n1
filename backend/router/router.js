@@ -10,6 +10,7 @@ import { updateUser } from "../controllers/updateUser.js";
 import { deleteUser } from "../controllers/deleteUser.js";
 import { Customers } from "../controllers/customers.js";
 import { registroVenta } from "../controllers/registroVenta.js";
+import { salesList } from "../controllers/SalesList.js"
 
 // creación del enrutador 
 const router = express.Router();
@@ -23,6 +24,7 @@ router.get("/users/:id", verifyToken, getUserById);
 router.put("/users/:id", verifyToken, updateUser);
 router.delete('/users/:id', verifyToken, deleteUser);
 router.get('/customers', Customers);
-router.post('/registroVenta', registroVenta)
+router.post('/registroVenta', registroVenta);
+router.get('/salesList', salesList);
 
 export default router;
