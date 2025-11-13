@@ -13,10 +13,11 @@ export default function SalesList() {
       setLoading(true);
       setError(null);
       
-      const res = await axios.get('http://localhost:5000/api/salesList', {
+      const res = await axios.get('http://localhost:5000/api/salesList?t=${Date.now()}', {
         headers: {
           'Accept': 'application/json'
         }
+        
       });
       
       console.log('Respuesta raw:', res);
@@ -48,6 +49,14 @@ export default function SalesList() {
   };
   
   fetchSales();
+
+    const interval = setInterval(fetchSales, 5000);
+
+  // limpiar el intervalo al desmontar
+  return () => clearInterval(interval);
+
+  
+
 }, []);
 
 return(
