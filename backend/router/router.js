@@ -11,6 +11,7 @@ import { deleteUser } from "../controllers/deleteUser.js";
 import { Customers } from "../controllers/customers.js";
 import { registroVenta } from "../controllers/registroVenta.js";
 import { salesList } from "../controllers/SalesList.js"
+import { busquedaCodigo } from "../controllers/busquedaCode.js"
 
 // creación del enrutador 
 const router = express.Router();
@@ -26,5 +27,6 @@ router.delete('/users/:id', verifyToken, deleteUser);
 router.get('/customers', Customers);
 router.post('/registroVenta', registroVenta);
 router.get('/salesList', salesList);
+router.get('/customers/search', busquedaCodigo)
 
 export default router;
