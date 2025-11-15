@@ -10,7 +10,7 @@ import { updateUser } from "../controllers/updateUser.js";
 import { deleteUser } from "../controllers/deleteUser.js";
 import { Customers } from "../controllers/customers.js";
 import { registroVenta } from "../controllers/registroVenta.js";
-import { salesList } from "../controllers/SalesList.js"
+import { salesList, salesReport } from "../controllers/Sales.js"
 import { busquedaCodigo } from "../controllers/busquedaCode.js"
 
 // creación del enrutador 
@@ -25,8 +25,9 @@ router.get("/users/:id", verifyToken, getUserById);
 router.put("/users/:id", verifyToken, updateUser);
 router.delete('/users/:id', verifyToken, deleteUser);
 router.get('/customers', Customers);
-router.post('/registroVenta', registroVenta);
-router.get('/salesList', salesList);
-router.get('/customers/search', busquedaCodigo)
+router.post('/sales', registroVenta);
+router.get('/sales', salesList);
+router.get('/customers/search', busquedaCodigo);
+router.get('/sales/report', salesReport);
 
 export default router;

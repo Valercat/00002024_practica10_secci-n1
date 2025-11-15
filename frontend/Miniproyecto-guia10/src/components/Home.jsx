@@ -4,6 +4,7 @@ import axios from "axios";
 import CustomerList from "./CustomerList.jsx";
 import RegistroVenta from "./registroVenta.jsx";
 import SalesList from "./SalesList.jsx";
+import SalesReport from "./SalesReport.jsx"
 
 import "./Home.css";
 
@@ -19,6 +20,8 @@ function Home() {
     <RegistroVenta />
     <br />
     <SalesList />
+    <br />
+    <SalesReport />
     </div>
     </>
   );

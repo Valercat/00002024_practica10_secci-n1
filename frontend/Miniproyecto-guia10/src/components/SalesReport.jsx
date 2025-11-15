@@ -13,7 +13,7 @@ export default function SalesList() {
       setLoading(true);
       setError(null);
       
-      const res = await axios.get('http://localhost:5000/api/sales?t=${Date.now()}', {
+      const res = await axios.get('http://localhost:5000/api/sales/report', {
         headers: {
           'Accept': 'application/json'
         }
@@ -62,23 +62,19 @@ export default function SalesList() {
 return(
     <>
         <div>
-            <h3>Lista de ventas</h3>
+            <h3>Reporte de ventas</h3>
             <table className = "tabla-customer"> 
                     <thead>
                     <tr>
-                    <th>ID Venta</th>
-                    <th>Monto</th>
-                    <th>Fecha</th>
-                    <th>Nombre Cliente</th>
+                    <th>Cliente</th>
+                    <th>Total Ventas</th>
                     </tr>
                     </thead>
                     <tbody>
                       {sale.map(u => (
                     <tr key={u.id}>
-                      <td>{u.id}</td>
-                      <td>{u.amount}</td>
-                      <td>{u.created_at}</td>
                       <td>{u.name}</td>
+                      <td>{u.total_sales}</td>
                     </tr>
                     ))}
                     </tbody>

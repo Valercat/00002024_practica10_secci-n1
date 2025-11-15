@@ -17,7 +17,7 @@ export default function RegistroVenta() {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/registroVenta", {
+      const res = await axios.post("http://localhost:5000/api/sales", {
         id_customer,
         amount,
       });
