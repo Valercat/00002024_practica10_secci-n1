@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
-import "./CustomerList.css";
+import "./TableStyle.css";
 
 export default function CustomerList() {
     const [customers, setCustomer] = useState([]);
@@ -21,11 +21,11 @@ export default function CustomerList() {
       
       console.log('Respuesta raw:', res);
       
-      // Check if we have valid data
+      //Verificar si los datos son validos
       if (res.data && Array.isArray(res.data)) {
         setCustomer(res.data);
       } else if (res.data && typeof res.data === 'object') {
-        // If data is nested in an object
+        //Si los datos estan anidados en un objeto
         const customers = res.data.data || res.data.customers;
         if (Array.isArray(customers)) {
           setCustomer(customers);

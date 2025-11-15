@@ -22,6 +22,24 @@ html{
    /* hace que los bordes no se dupliquen */
 }
 
+.tabla-ventas-total{
+  width: 100%;
+  border-collapse: collapse;
+   /* hace que los bordes no se dupliquen */
+}
+
+.tabla-ventas-total th,
+.tabla-ventas-total td {
+  border: 2px solid #150927ac; /* color del borde */
+  padding: 8px;
+  text-align: left;
+  background-color: #5f155549;
+}
+
+.tabla-ventas-total th {
+  background-color: #2e0736a2;
+}
+
 .tabla-customer th,
 .tabla-customer td {
   border: 2px solid #090f27ac; /* color del borde */

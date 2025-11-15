@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
-import "./CustomerList.css"
+import "./TableStyle.css"
 
 export default function SalesList() {
     const [sale, setSale] = useState([]);
@@ -22,11 +22,11 @@ export default function SalesList() {
       
       console.log('Respuesta raw:', res);
       
-      // Check if we have valid data
-      if (res.data && Array.isArray(res.data)) {
+    //Verificar si los datos son validos      
+    if (res.data && Array.isArray(res.data)) {
         setSale(res.data);
       } else if (res.data && typeof res.data === 'object') {
-        // If data is nested in an object
+        //Si los datos estan anidados en un objeto
         const sale = res.data.data || res.data.sale;
         if (Array.isArray(sale)) {
           setSale(sale);
@@ -63,7 +63,7 @@ return(
     <>
         <div>
             <h3>Reporte de ventas</h3>
-            <table className = "tabla-customer"> 
+            <table className = "tabla-ventas-total"> 
                     <thead>
                     <tr>
                     <th>Cliente</th>
